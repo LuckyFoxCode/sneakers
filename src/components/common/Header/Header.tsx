@@ -1,14 +1,5 @@
-import { Container } from '..';
-import s from './Header.module.scss';
-import { HeaderLogo, HeaderPanel } from './components';
+import styles from './Header.module.scss';
 
 export const Header = () => {
-  return (
-    <header className={s.Header}>
-      <Container className={s.Container}>
-        <HeaderLogo />
-        <HeaderPanel />
-      </Container>
-    </header>
-  );
+  return <header className={styles.Header}>header</header>;
 };
