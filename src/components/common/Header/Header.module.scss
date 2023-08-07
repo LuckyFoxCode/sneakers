@@ -1,4 +1,19 @@
 @import 'styles';
 
 .Header {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid $GRAY_200;
+  @include media($SCREEN_TABLET_SMALL) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  @include media($SCREEN_DESKTOP) {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+}
+
+.Container {
+  @include flex(space-between, center);
 }

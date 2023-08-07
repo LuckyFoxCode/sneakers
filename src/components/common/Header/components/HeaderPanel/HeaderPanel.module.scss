@@ -1,0 +1,54 @@
+@import 'styles';
+
+.Panel {
+  @include flex(flex-start, center);
+  column-gap: 10px;
+  @include media($SCREEN_TABLET_SMALL) {
+    column-gap: 20px;
+  }
+  @include media($SCREEN_DESKTOP) {
+    column-gap: 30px;
+  }
+
+  &__link {
+    @include flex(flex-start, center);
+    @include text(rem(14), 500, $GRAY_700);
+
+    &:hover &_icon {
+      fill: $BLUE_400;
+    }
+
+    &:active &_icon {
+      fill: $BLUE_600;
+    }
+
+    &_icon {
+      @include transition(fill);
+      fill: $GRAY_400;
+    }
+
+    &_price {
+      margin-left: 5px;
+      @include media($SCREEN_IPHONE_6) {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  &__theme {
+    cursor: pointer;
+
+    &:hover &_icon {
+      fill: $BLUE_400;
+    }
+
+    &:active &_icon {
+      fill: $BLUE_600;
+    }
+
+    &_icon {
+      @include transition(fill);
+      fill: $GRAY_400;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@import 'styles';
+
+.Logo {
+  width: fit-content;
+  @include flex(flex-start, center);
+
+  &__img {
+    margin-right: 5px;
+    @include size(30px);
+    @include media($SCREEN_IPHONE_6) {
+      @include size(40px);
+      margin-right: 10px;
+    }
+  }
+
+  &__wrapper {
+    @include flex-col;
+
+    &_title {
+      @include text(rem(16), 700, $BLACK);
+      text-transform: uppercase;
+      @include media($SCREEN_IPHONE_6) {
+        font-size: rem(20);
+      }
+    }
+
+    &_descr {
+      font-family: $SECOND_FONT;
+      @include text(rem(12), 400, $GRAY_500);
+      @include media($SCREEN_IPHONE_6) {
+        font-size: rem(14);
+      }
+    }
+  }
+}
