@@ -5,7 +5,5 @@ export type IconType =
   | 'Chevron_Right'
   | 'Close'
   | 'Heart'
-  | 'Night'
   | 'Profile'
-  | 'Search'
-  | 'Sun';
+  | 'Search';
