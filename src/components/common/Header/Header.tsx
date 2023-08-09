@@ -5,7 +5,7 @@ import styles from './Header.module.scss';
 import { HeaderLogo, HeaderPanel } from './components';
 
 export const Header = () => {
-  const [isShowCart, setIsShowCart] = useState<boolean>(true);
+  const [isShowCart, setIsShowCart] = useState<boolean>(false);
 
   const handleIsShowCart = () => {
     setIsShowCart(!isShowCart);
