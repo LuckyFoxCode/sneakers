@@ -7,12 +7,13 @@
     column-gap: 20px;
   }
   @include media($SCREEN_DESKTOP) {
-    column-gap: 30px;
+    column-gap: 25px;
   }
 
   &__link {
     @include flex(flex-start, center);
     @include text(rem(14), 500, $GRAY_700);
+    cursor: pointer;
 
     &:hover &_icon {
       fill: $BLUE_400;
