@@ -1,14 +1,9 @@
-import { Card, Container } from 'components/common';
+import { Shop } from 'components';
 
 export const HomePage = () => {
   return (
     <>
-      HomePage
-      <main>
-        <Container>
-          <Card />
-        </Container>
-      </main>
+      <Shop />
     </>
   );
 };

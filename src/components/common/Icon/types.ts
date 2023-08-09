@@ -7,4 +7,5 @@ export type IconType =
   | 'Heart'
   | 'Night'
   | 'Profile'
+  | 'Search'
   | 'Sun';

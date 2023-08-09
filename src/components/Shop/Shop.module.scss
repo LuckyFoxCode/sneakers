@@ -1,0 +1,80 @@
+@import 'styles';
+
+.Shop {
+  padding-bottom: 35px;
+  @include media($SCREEN_TABLET_SMALL) {
+    padding-bottom: 75px;
+  }
+  &__header {
+    margin-bottom: 25px;
+    @include flex(space-between, center);
+    flex-direction: column;
+    @include media($SCREEN_TABLET_SMALL) {
+      margin-bottom: 35px;
+      flex-direction: row;
+    }
+
+    &_title {
+      font-family: $SECOND_FONT;
+      margin-bottom: 10px;
+      @include text(rem(32), 400, $BLACK);
+      @include media($SCREEN_TABLET_SMALL) {
+        margin-bottom: 0;
+      }
+    }
+    &_search {
+      position: relative;
+      width: 100%;
+      @include media($SCREEN_TABLET_SMALL) {
+        max-width: 250px;
+      }
+
+      .input {
+        width: 100%;
+        padding: 15px 18px 15px 40px;
+        border-radius: 8px;
+        border: 1px solid $GRAY_200;
+        outline: none;
+        @include text(rem(14), 400, $GRAY_300);
+        @include transition(border-color);
+
+        &::placeholder {
+          color: $GRAY_300;
+        }
+
+        &:focus {
+          border-color: $BLUE_400;
+        }
+      }
+
+      .icon {
+        position: absolute;
+        top: 50%;
+        left: 18px;
+        transform: translateY(-50%);
+        fill: $GRAY_300;
+      }
+    }
+  }
+}
+
+.Container {
+  @include flex-col;
+}
+
+.List {
+  @include flex(center, center);
+  flex-wrap: wrap;
+  column-gap: 40px;
+  row-gap: 20px;
+  @include media($SCREEN_TABLET_SMALL) {
+    row-gap: 30px;
+  }
+  @include media($SCREEN_DESKTOP) {
+    row-gap: 40px;
+  }
+
+  @include media($SCREEN_MS) {
+    row-gap: 50px;
+  }
+}

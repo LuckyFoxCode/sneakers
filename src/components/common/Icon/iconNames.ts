@@ -7,5 +7,6 @@ export default [
   'Heart',
   'Night',
   'Profile',
+  'Search',
   'Sun',
 ];

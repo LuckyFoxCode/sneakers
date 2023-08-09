@@ -6,4 +6,5 @@ export { ReactComponent as IconClose } from 'assets/svg/Close.svg';
 export { ReactComponent as IconHeart } from 'assets/svg/Heart.svg';
 export { ReactComponent as IconNight } from 'assets/svg/Night.svg';
 export { ReactComponent as IconProfile } from 'assets/svg/Profile.svg';
+export { ReactComponent as IconSearch } from 'assets/svg/Search.svg';
 export { ReactComponent as IconSun } from 'assets/svg/Sun.svg';
