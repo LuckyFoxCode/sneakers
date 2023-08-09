@@ -1,0 +1,65 @@
+@import 'styles';
+
+.Cart {
+  position: absolute;
+  @include position;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($BLACK, 0.5);
+  @include flex(flex-end, center);
+  z-index: 2;
+
+  &__content {
+    width: 100%;
+    max-width: 385px;
+    height: 100%;
+    padding: 30px;
+    background-color: $WHITE;
+    box-shadow: -10px 4px 24px 0px rgba(0, 0, 0, 0.1);
+
+    &_title {
+      font-family: $SECOND_FONT;
+      @include text(rem(24), 400, $BLACK);
+      margin-bottom: 30px;
+    }
+
+    &_empty {
+      height: 100%;
+      @include flex-col(center, center);
+
+      .image {
+        @include size(120px);
+        margin-bottom: 20px;
+      }
+
+      .title {
+        @include text(rem(22), 600, $BLACK);
+        margin-bottom: 10px;
+      }
+
+      .descr {
+        width: 100%;
+        max-width: 285px;
+        font-family: $SECOND_FONT;
+        @include text(rem(16), 400, $GRAY_400);
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 245px;
+        @include text(rem(16), 400, $WHITE);
+        padding: 17px 19px;
+        border-radius: 18px;
+        background-color: $SUCCESS_600;
+        cursor: pointer;
+        @include transition(background-color);
+
+        &:hover {
+          background-color: $SUCCESS_500;
+        }
+      }
+    }
+  }
+}

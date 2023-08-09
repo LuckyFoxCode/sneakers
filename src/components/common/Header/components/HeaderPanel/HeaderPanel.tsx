@@ -1,12 +1,19 @@
 import { Icon } from 'components/common';
+import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { ROUTES } from 'router/routes';
 import styles from './HeaderPanel.module.scss';
 
-export const HeaderPanel = () => {
+interface HeaderPanelProps {
+  onClick?: () => void;
+}
+
+export const HeaderPanel: FC<HeaderPanelProps> = ({ onClick }) => {
   return (
     <div className={styles.Panel}>
-      <button className={styles.Panel__link}>
+      <button
+        className={styles.Panel__link}
+        onClick={onClick}>
         <Icon
           name='Cart'
           size={20}
