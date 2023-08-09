@@ -1,0 +1,66 @@
+@import 'styles';
+
+.Card {
+  position: relative;
+  width: 100%;
+  max-width: 212px;
+  border-radius: 30px;
+  border: 1px solid $GRAY_200;
+  padding: 30px 30px 25px;
+  @include transition(box-shadow);
+
+  &:hover {
+    box-shadow: $BOX_SHADOW_LG;
+  }
+
+  &__favorite {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    cursor: pointer;
+    border: 1px solid;
+    border-radius: 8px;
+    @include size(32px);
+    @include transition(background-color);
+  }
+
+  &__image {
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    @include text(rem(14), 400, $BLACK);
+    margin-bottom: 15px;
+  }
+}
+
+.Price {
+  @include flex(space-between, center);
+
+  &__descr {
+    @include flex-col;
+
+    &_title {
+      font-family: $SECOND_FONT;
+      @include text(rem(13), 400, $GRAY_400);
+      text-transform: uppercase;
+    }
+
+    &_text {
+      @include text(rem(14), 700, $BLACK);
+    }
+  }
+
+  &__btn {
+    border: 1px solid $GRAY_200;
+    border-radius: 8px;
+    cursor: pointer;
+    @include size(32px);
+    @include transition(background-color);
+
+    &_icon {
+      fill: $GRAY_300;
+      @include transition(fill, transform);
+    }
+  }
+}
